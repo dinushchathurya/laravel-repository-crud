@@ -59,9 +59,8 @@ class OrderController extends Controller
         ]);
     }
 
-    public function update(UpdateOrderRequest $request)
+    public function update(UpdateOrderRequest $request, $id)
     {
-        $id = $request->route('id');
         $orderDetails = $request->only([
             'client',
             'details'
